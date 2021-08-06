@@ -21,7 +21,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} method='post' action= 'https://formsubmit.co/farhatbassel@tutanota.com'>
                     <h2>To contact me, submit the form below</h2>
                     <input type='text' name='name' placeholder='Name' required/>
-                    <input type='text' name='name' placeholder='Email' required/>
+                    <input type='text' name='email' placeholder='Email' required/>
                     <textarea placeholder='Message' name='message' required></textarea>
                     <button type='submit' name='submit' value="Send Message">Submit</button>
                     {message && <span>Thank you, I'll get back to you as soon as possible :)</span>}
