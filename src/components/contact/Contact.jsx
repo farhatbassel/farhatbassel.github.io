@@ -18,10 +18,11 @@ export default function Contact() {
             </div>
             <div className="wrapper">
             <div className='left'>
-                <form  method='POST' action= 'https://formsubmit.co/farhatbassel@tutanota.com'>
+                <form onSubmit={handleSubmit} method='POST' action= 'https://formsubmit.co/farhatbassel@tutanota.com'>
                     <h2>To contact me, submit the form below</h2>
                     <input type='text' name='name' placeholder='Name' required/>
                     <input type='text' name='email' placeholder='Email' required/>
+                    <input type='hidden' name ='_next' value = 'https://farhatbassel.github.io/portfolio#contact'/>
                     <textarea placeholder='Message' name='message' required></textarea>
                     <button type='submit' name='submit' value="Send Message">Submit</button>
                     {message && <span>Thank you, I'll get back to you as soon as possible :)</span>}
