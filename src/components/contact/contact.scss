@@ -1,0 +1,160 @@
+@import '../../global.scss';
+
+.contact{
+    background-color: $backgroundColor;
+    
+
+    .title{
+        padding: 10px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $backgroundColor;
+
+            
+        h1{
+            color: $mainColor;
+        }
+        h2{
+            color: $secondaryColor;
+        }
+    }
+
+    .wrapper{
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        .left{
+            height: calc(100vh - 205px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $backgroundColor;
+            flex: 0.5;
+
+            @include mobile{
+                height: 500px;
+            }
+
+        form{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding-right: 120px;
+            color: $secondaryColor;
+            background-color: $backgroundColor;
+
+            @include mobile{
+                padding-right: 0px;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            h2{
+                padding-left: 70px;
+                @include mobile{
+                    font-size: 18px;
+                    text-align: center;
+                    padding: 10px 0px 20px;
+                }
+            }
+
+            input{
+                width: 400px;
+                height: 30px;
+                font-size: 25px;
+                color: inherit;
+                background-color: inherit; 
+                border:none;
+                outline-width: 0;
+
+                @include mobile{
+                    font-size: 18px;
+                    width: 300px;
+                }
+
+            }
+
+            textarea{
+                width: 400px;
+                height: 200px;
+                font-size: 25px;
+                background-color: inherit;
+                border:none;
+                outline-width: 0;
+                color: inherit;
+                resize: none;
+
+                @include mobile{
+                    font-size: 18px;
+                    width: 300px;
+                }
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                font-size: 20px;
+                justify-content: center;
+                align-items: center;
+                border:none;
+                outline-width: 0;
+                color: inherit;
+                background-color: $mainColor;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            span{
+                color: $mainColor;
+                @include mobile{
+                    font-size: 18px;
+                    text-align: center;
+                    padding-top: 10px;
+                }
+            }
+        }
+            
+    }
+
+        .right{
+            height: calc(100vh - 205px);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $backgroundColor;
+            flex: 0.5;
+            
+            @include mobile{
+                display: none;
+            }
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                height: 350px;
+                padding-left: 100px;
+                color: $secondaryColor;
+                background-color: $backgroundColor;
+                
+                h2{
+                    color:$secondaryColor;
+                    font-size: 35px;
+                }
+                
+                h3{
+                    color:#505050;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

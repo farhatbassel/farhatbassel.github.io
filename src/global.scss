@@ -1,0 +1,11 @@
+$mainColor:#CC93D6;
+$backgroundColor: black;
+$secondaryColor:white;
+
+$width: 640px;
+
+@mixin mobile{
+    @media (max-width : #{$width}){
+        @content
+    }
+}

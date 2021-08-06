@@ -1,0 +1,129 @@
+@import '../../global.scss';
+
+.work{
+    background-color: #F0F0F0;
+
+    .title{
+        padding: 10px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $backgroundColor;
+
+        h1{
+            color: $mainColor;
+        }
+    }
+
+    .wrapper{
+        display: flex;
+
+        @include mobile{    
+            flex-direction: column;
+            //justify-content: center;    
+        }
+        
+        .left{
+            height: calc(100vh - 168px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            flex: 0.5;
+            padding-left: 150px;
+
+            @include mobile{
+                padding-left: 0px;
+            }
+
+            img{
+                height: 80%;
+            }
+
+            #heatMap{
+                height: 70%;
+            }
+        }
+
+        .right{
+            height: calc(100vh - 168px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex: 0.5;
+
+            @include mobile{
+                height: 600px;
+            }
+
+            .text{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                height: 230px;
+                padding-top: 250px;
+
+                
+                @include mobile{
+                    padding-top: 0px;
+                    height: 500px;
+                }
+                
+                h1{
+                    font-size: 40px;
+                    padding-bottom: 20px;
+                }
+                h2{
+                    font-size: 25px;
+                    font-weight: 400;
+
+                    @include mobile{
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+            .fullwrap2{
+                width: 600px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                @include mobile{
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .buttonwrap{
+                    
+                    a{
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    button{
+                        width: 200px;
+                        height: 60px;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border:none;
+                        outline-width: 0;
+                        color: inherit;
+                        background-color: $mainColor;
+                        border-radius: 10px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        
+                        .github{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
