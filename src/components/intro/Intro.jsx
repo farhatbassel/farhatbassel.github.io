@@ -34,7 +34,7 @@ export default function Intro() {
             backDelay: 1200,
             backSpeed: 60,
             startDelay: 1800,
-            strings: ['Astrophysist','Programmer','Data Analyst']
+            strings: ['Astrophysicist','Programmer','Data Analyst','Web Developer']
         })
     },[])
 
