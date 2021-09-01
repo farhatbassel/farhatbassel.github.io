@@ -1,10 +1,10 @@
 @import '../../global.scss';
 
-.work{
+.work {
     background-color: #F0F0F0;
     --transition: all 0.8s ease-out;
-    
-    .title{
+
+    .title {
         padding: 10px 100px;
         display: flex;
         flex-direction: column;
@@ -12,20 +12,20 @@
         justify-content: center;
         background-color: $backgroundColor;
 
-        h1{
+        h1 {
             color: $mainColor;
         }
     }
 
-    section{
+    section {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 80vh;
         position: relative;
         overflow: hidden;
-    
-        .wrapper{
+
+        .wrapper {
             position: absolute;
             display: flex;
             align-items: center;
@@ -34,12 +34,15 @@
             opacity: 0;
             transition: var(--transition);
 
-            @include mobile{    
+            @include mobile {
                 flex-direction: column;
-                //justify-content: center;    
             }
-            
-            .left{
+
+            @include tablet {
+                flex-direction: column;
+            }
+
+            .left {
                 height: calc(100vh - 168px);
                 display: flex;
                 align-items: center;
@@ -48,41 +51,51 @@
                 flex: 0.5;
                 padding-left: 150px;
 
-                @include mobile{
-                    padding-left: 0px;
+                @include tablet {
+                    padding: 0;
+                    flex: 0.2;
+                    margin: auto;
                 }
-                img{
+
+                img {
                     height: 90%;
-                    @include mobile{
+
+                    @include mobile {
+                        display: none;
+                    }
+
+                    @include tablet {
                         display: none;
                     }
                 }
-                img{
-                    .houses{
+
+                img {
+                    .houses {
                         height: 70%;
                         width: 70%;
                     }
                 }
             }
 
-            .right{
+            .right {
                 height: calc(100vh - 168px);
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 flex: 0.5;
 
-                @include mobile{
-                    height: 400px;
+                @include mobile {
+                    height: 100vh;
+                    width: auto;
                 }
 
-                img{
-                    @include mobile{
-                        display: none;
-                    }
+                @include tablet {
+                    height: auto;
+                    width: auto;
+                    flex: 0.8;
                 }
 
-                .text{
+                .text {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
@@ -91,78 +104,56 @@
                     width: 600px;
                     overflow: hidden;
 
-                    @include mobile{
-                        padding-top: 0px;
+                    @include mobile {
+                        padding: 0px;
+                        margin: auto;
+                        height: auto;
                         height: 200px;
+                        width: auto;
                     }
-                    
-                    h1{
+
+                    @include tablet {
+                        padding-top: 0;
+                    }
+
+                    h1 {
                         font-size: 40px;
                         padding-bottom: 20px;
                         text-align: center;
+
+                        @include mobile {
+                            text-align: center;
+                            font-size: 30px;
+                        }
                     }
-                    h2{
+
+                    h2 {
                         font-size: 25px;
                         font-weight: 400;
                         text-align: center;
 
-                        @include mobile{
+                        @include mobile {
                             font-size: 18px;
                             text-align: center;
+                            padding: auto;
                         }
                     }
                 }
-                
-                .fullwrap{
+
+                .fullwrap {
                     width: 600px;
                     height: 200px;
                     display: flex;
 
-                    @include mobile{
+                    @include mobile {
                         padding-top: 0px;
                         height: 100px;
                         width: 340px;
                         padding-left: 10px;
                     }
 
-                    .buttonwrap{
+                    .buttonwrap {
                         padding-left: 70px;
-
-                        @include mobile{
-                            padding-left: 10px;
-                        }
-                        
-                        a{
-                            text-decoration: none;
-                            color: inherit;
-                        
-                            button{
-                                width: 200px;
-                                height: 60px;
-                                font-size: 20px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border:none;
-                                outline-width: 0;
-                                color: inherit;
-                                background-color: $mainColor;
-                                border-radius: 10px;
-                                font-weight: 500;
-                                cursor: pointer;
-
-                                @include mobile{
-                                    width: 150px;
-                                }
-                                
-                                .github{
-                                    font-size: 40px;
-                                }
-                            }
-                        }
-                    }
-                    .second-btn{
-                        padding-left: 200px;
 
                         @include mobile {
                             padding-left: 10px;
@@ -196,11 +187,51 @@
                                 }
                             }
                         }
+                    }
+
+                    .second-btn {
+                        padding-left: 200px;
+
+                        @include mobile {
+                            padding-left: 10px;
+                            margin: auto;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+
+                            button {
+                                width: 200px;
+                                height: 60px;
+                                font-size: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: none;
+                                outline-width: 0;
+                                color: inherit;
+                                background-color: $mainColor;
+                                border-radius: 10px;
+                                font-weight: 500;
+                                cursor: pointer;
+
+                                @include mobile {
+                                    width: 150px;
+
+                                }
+
+                                .github {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
 
                     }
                 }
             }
         }
+
         .activeSlide {
             opacity: 1;
             transform: translateX(0);
@@ -213,7 +244,7 @@
         .nextSlide {
             transform: translateX(200%);
         }
-        
+
         .prev,
         .next {
             position: absolute;
@@ -231,6 +262,13 @@
             cursor: pointer;
             transition: var(--transition);
             overflow: hidden;
+
+            @include mobile {
+                font-size: 50px;
+                height: 75px;
+                width: 75px;
+
+            }
         }
 
         .prev:hover,
@@ -246,5 +284,5 @@
             right: 0;
         }
     }
-    
+
 }

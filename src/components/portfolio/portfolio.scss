@@ -1,30 +1,43 @@
 @import '../../global.scss';
 
-.portfolio{
+.portfolio {
     background-color: $secondaryColor;
 
-    .title{
+    @include mobile {
+        overflow: hidden;
+    }
+
+    @include tablet {
+        overflow: hidden;
+    }
+
+    .title {
         padding: 10px 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: $backgroundColor;
-            
-        h1{
+
+        h1 {
             color: $mainColor;
         }
     }
 
-    .wrapper{
+    .wrapper {
         display: flex;
 
-        @include mobile{
+        @include mobile {
             flex-direction: column;
             justify-content: center;
         }
 
-        .left{
+        @include tablet {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left {
             height: calc(100vh - 168px);
             display: flex;
             align-items: flex-start;
@@ -33,53 +46,64 @@
             flex: 0.5;
             padding-left: 200px;
             position: relative;
-            
-            @include mobile{
+
+            @include mobile {
                 padding-left: 0px;
                 align-items: center;
                 height: 180px;
             }
-            .text{
+
+            @include tablet {
+                padding: 30px 0 0 0;
+                margin: auto;
+                align-items: center;
+            }
+
+            .text {
                 height: 310px;
                 width: 700px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                
-                @include mobile{
+
+                @include mobile {
                     width: 400px;
                     height: 180px;
                     padding-top: 10px;
                 }
 
-                h1{
+                h1 {
                     color: $backgroundColor;
                     font-size: 60px;
                     padding-bottom: 20px;
-                    @include mobile{
+
+                    @include mobile {
                         font-size: 40px;
                     }
-    
+
                 }
-                h2{
+
+                h2 {
                     color: $backgroundColor;
                     padding-bottom: 20px;
-                    @include mobile{
+
+                    @include mobile {
                         font-size: 15px;
                     }
                 }
 
-                a{
+                a {
                     text-decoration: none;
                     color: inherit;
                 }
-                button{
+
+                button {
                     width: 150px;
                     height: 50px;
                     font-size: 20px;
                     justify-content: center;
                     align-items: center;
-                    border:none;
+                    border: none;
                     outline-width: 0;
                     color: inherit;
                     background-color: $mainColor;
@@ -87,16 +111,17 @@
                     font-weight: 500;
                     cursor: pointer;
 
-                    @include mobile{
+                    @include mobile {
                         width: 120px;
                         height: 45px;
                         font-size: 18px;
                     }
-                    
+
                 }
             }
         }
-        .right{
+
+        .right {
             height: calc(100vh - 168px);
             display: flex;
             align-items: flex-start;
@@ -104,11 +129,15 @@
             flex: 0.5;
             position: relative;
 
-            @include mobile{
-                align-items: center;    
+            @include mobile {
+                align-items: center;
             }
 
-            .wrapper{
+            @include tablet {
+                align-items: center;
+            }
+
+            .wrapper {
                 height: 400px;
                 width: 700px;
                 padding-top: 250px;
@@ -116,49 +145,61 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                
-             @include mobile{
-                justify-content: center;
-                padding-top: 0px;
-                padding-left: 0px;    
-                width: 340px;
-                height: 270px;
-            }
-                
-                h2{
+
+                @include mobile {
+                    justify-content: center;
+                    padding-top: 0px;
+                    padding-left: 0px;
+                    width: 340px;
+                    height: 270px;
+                }
+
+                @include tablet {
+                    padding: 0;
+                    margin: auto;
+                }
+
+                h2 {
                     color: $backgroundColor;
                     padding-bottom: 20px;
-                    
-                    @include mobile{
+
+                    @include mobile {
                         font-size: 15px;
                         text-align: center
                     }
                 }
             }
-            a{
+
+            a {
                 position: absolute;
                 bottom: 10px;
                 left: 40%;
 
-                @include mobile{
+                @include mobile {
                     bottom: 0px;
-                    left: 35%;
+                    left: 20%;
                 }
-                
-                .arrow{
+
+                @include tablet {
+                    bottom: 0;
+                    left: 45%;
+                }
+
+                .arrow {
                     width: 100px;
                     height: 100px;
                     color: $mainColor;
                     animation: arrowBlink 2s infinite;
-                    
+
                 }
+
                 @keyframes arrowBlink {
-                    100%{
+                    100% {
                         opacity: 0;
                     }
-                    
+
                 }
-            } 
+            }
         }
     }
 }

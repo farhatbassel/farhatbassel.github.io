@@ -8,7 +8,6 @@ import data from "./data";
 export default function Work() {
   const [works, setWorks] = useState(data);
   const [index, setIndex] = useState(0);
-  const [doubleButton, setDoublButton] = useState();
 
   useEffect(() => {
     const lastIndex = works.length - 1;

@@ -9,3 +9,9 @@ $width: 640px;
         @content
     }
 }
+
+@mixin tablet {
+    @media (max-width: #{1800px}){
+        @content
+    }
+}
