@@ -12,9 +12,6 @@ export default function Intro() {
   const ref = useRef(null);
 
   useEffect(() => {
-    const element = ref.current;
-    var tl = gsap.timeline();
-
     gsap.fromTo(
       ".wrapperText",
       {

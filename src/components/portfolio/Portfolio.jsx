@@ -14,7 +14,7 @@ export default function Portfolio() {
             <h2>My name is Bassel Farhat,</h2>
             <h2>I am an astrophysicist who loves to code.</h2>
             <h2>Find my resume here</h2>
-            <a href={Lebenslauf} target="_blank">
+            <a href={Lebenslauf} target="_blank" rel="noreferrer">
               <button>Resume</button>
             </a>
           </div>

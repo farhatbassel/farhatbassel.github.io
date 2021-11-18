@@ -1,6 +1,7 @@
 import thesis from "../../images/thesis.png";
 import titanic from "../../images/PointPlot.png"
-import houses from "../../images/houses.png"
+import social from "../../images/SocialMedia.jpg"
+
 const data = [{
         id: 1,
         image: thesis,
@@ -9,25 +10,30 @@ const data = [{
         bothButtons: true,
         githubLink: "https://github.com/farhatbassel/thesisPlots",
         firstButton: 'Full Thesis',
-
+        kaggle: false,
+        cssReference: 'thesis',
     },
     {
         id: 2,
-        image: titanic,
-        title: "Learning from the disaster",
-        text: 'Studied the survival rate from the titanic. Used Random Forest as best fit model.',
+        image: social,
+        title: "Social Media Website",
+        text: 'Created a Social Media account using MERN technologies',
         bothButtons: false,
-        githubLink: "https://github.com/farhatbassel/Titanic",
+        githubLink: "https://github.com/farhatbassel/social-media-app",
         firstButton: null,
+        kaggle: false,
+        cssReference: 'social',
     },
     {
         id: 3,
-        image: houses,
-        title: "Suitable Housing",
-        text: 'Studied the house pricing on a housing dataset using multiple solvers. Used stacked models as best fit.',
+        image: titanic,
+        title: "Data Analysis",
+        text: 'Studied multiple data sets using different visualization technics and machine learning algorithms',
         bothButtons: false,
-        githubLink: "https://github.com/farhatbassel/housePricing",
+        githubLink: "https://www.kaggle.com/farhatbassel",
         firstButton: null,
+        kaggle: true,
+        cssReference: 'titanic',
     }
 ]
 

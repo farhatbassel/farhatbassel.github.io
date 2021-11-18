@@ -26,8 +26,16 @@ export default function Work() {
       </div>
       <section>
         {data.map((work, workIndex) => {
-          const { image, title, text, bothButtons, githubLink, firstButton } =
-            work;
+          const {
+            image,
+            title,
+            text,
+            bothButtons,
+            githubLink,
+            firstButton,
+            kaggle,
+            cssReference,
+          } = work;
 
           let position = "nextSlide";
           if (workIndex === index) {
@@ -42,7 +50,11 @@ export default function Work() {
           return (
             <article className={`wrapper ${position}`}>
               <section className="left">
-                <img src={image} alt={`${title}`} className={`${title}`} />
+                <img
+                  src={image}
+                  alt={`${title}`}
+                  className={`${cssReference}`}
+                />
               </section>
               <section className="right">
                 <div className="text">
@@ -52,7 +64,7 @@ export default function Work() {
                 <div className="fullwrap">
                   {bothButtons && (
                     <div className="buttonwrap">
-                      <a href={fullThesis} target="_blank">
+                      <a href={fullThesis} target="_blank" rel="noreferrer">
                         <button id="first-btn">{firstButton}</button>
                       </a>
                     </div>
@@ -60,9 +72,13 @@ export default function Work() {
                   <div
                     className={`${bothButtons ? "buttonwrap" : "second-btn"}`}
                   >
-                    <a href={githubLink} target="_blank">
+                    <a href={githubLink} target="_blank" rel="noreferrer">
                       <button>
-                        <GitHub className="github" />
+                        {!kaggle ? (
+                          <GitHub className="github" />
+                        ) : (
+                          <span className="kaggleButton">k</span>
+                        )}
                       </button>
                     </a>
                   </div>

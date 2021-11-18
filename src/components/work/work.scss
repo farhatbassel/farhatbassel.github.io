@@ -67,13 +67,11 @@
                     @include tablet {
                         display: none;
                     }
+
                 }
 
-                img {
-                    .houses {
-                        height: 70%;
-                        width: 70%;
-                    }
+                .social {
+                    height: 45%;
                 }
             }
 
@@ -180,11 +178,14 @@
 
                                 @include mobile {
                                     width: 150px;
+
+
                                 }
 
                                 .github {
                                     font-size: 40px;
                                 }
+
                             }
                         }
                     }
@@ -197,6 +198,8 @@
                             margin: auto;
                         }
 
+
+
                         a {
                             text-decoration: none;
                             color: inherit;
@@ -204,7 +207,8 @@
                             button {
                                 width: 200px;
                                 height: 60px;
-                                font-size: 20px;
+                                font-size: 38px;
+                                font-weight: 700;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -216,6 +220,8 @@
                                 font-weight: 500;
                                 cursor: pointer;
 
+
+
                                 @include mobile {
                                     width: 150px;
 
@@ -224,6 +230,7 @@
                                 .github {
                                     font-size: 40px;
                                 }
+
                             }
                         }
 
